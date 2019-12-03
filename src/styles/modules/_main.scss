@@ -7,7 +7,7 @@
     .item-1,.item-2,.item-3{
         background-color: #343434;
     }
-    .item-2{
+    .item-2>div{
         display: flex;
         justify-content: space-between;
         span{
@@ -31,22 +31,68 @@
     .item-4 ,.item-6,.item-7,.item-9,.item-5{
         background-color: #f9f9f9;
     }
-    .item-5 {
+    .item-5>div {
         display: flex;
         justify-content: space-between;
+        height: 100%;
         .topnav-left,.topnav-right{
             display: flex;
             justify-content: center;
             align-items: center;
         }
         .topnav-right{
-          
+          .clearfix{
+            >li{
+                float: left;
+                width: 60px;
+                height:40px;
+                line-height: 40px;
+                text-align: center;
+                font-size: 16px;
+                >a{
+                    display: block;
+                    color: #343434;
+                    background: #f9f9f9;
+                }                  
+                >a:hover{ 
+                    text-decoration: none;
+                    background: #343434;
+                    color: #f9f9f9;
+                }
+                .subnav{
+                    position: absolute;
+                    display: none;
+                    >li{
+                        width: 60px;
+                        height:40px;
+                        line-height: 40px;
+                        text-align: center;
+                        font-size: 16px; 
+                        >a{
+                            display: block;
+                            color: #343434;
+                            background: #f9f9f9;
+                        }                  
+                        >a:hover{ 
+                            text-decoration: none;
+                            background: #343434;
+                            color: #f9f9f9;
+                        }
+                    }
+                   
+                }
+
+            }
+            >li:nth-child(2):hover .subnav,>li:nth-child(5):hover .subnav{
+                display: block;
+            }
+          }
         }
     }
     .item-8 {
         background-color: #d0e4a9;
         .el-carousel__item h3 {
-            color: #475669;
+            color: red;
             font-size: 14px;
             opacity: 0.75;
             line-height: 200px;
