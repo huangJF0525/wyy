@@ -120,7 +120,7 @@ export default {
                   message: reason
                 });
                 // 跳转到后端首页
-                this.$router.push("/main");
+                this.$router.push("/admin");
               } else {
                 // 弹失败提示
                 this.$message.error(reason);

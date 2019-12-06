@@ -49,7 +49,12 @@ const routes = [
         component: () => import("../views/main/down")
       },
       {
-        path: "/case",
+        path: "/caselist",
+        name: "caselist",
+        component: () => import("../views/main/caselist")
+      },
+      {
+        path: "/case/:id",
         name: "case",
         component: () => import("../views/main/case")
       }

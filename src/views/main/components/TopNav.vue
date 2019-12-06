@@ -17,7 +17,7 @@
           </ul>
         </li>
         <li><router-link to="/down">下载</router-link></li>
-        <li><router-link to="/case">案例</router-link></li>
+        <li><router-link to="/caselist">案例</router-link></li>
         <li>
           <router-link to="/login">演示</router-link>
           <ul class="subnav">
