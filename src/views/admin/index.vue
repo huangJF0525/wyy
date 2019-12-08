@@ -40,7 +40,10 @@
         <maintain-left v-if="key == 5"></maintain-left>
         <exploit-left v-if="key == 6"></exploit-left>
       </div>
-      <div class="right-content"></div>
+      <div class="right-content">
+        <div class="content-top"></div>
+        <router-view></router-view>
+      </div>
     </div>
     <div class="footer"></div>
   </div>
@@ -61,7 +64,9 @@ export default {
       activeIndex2: "1"
     };
   },
-  created() {},
+  created() {
+    this.handleSelect(1);
+  },
   components: {
     MyLeft,
     ContLeft,

@@ -58,7 +58,8 @@ const routes = [
         name: "case",
         component: () => import("../views/main/case")
       }
-    ]
+    ],
+    redirect: "/home"
   },
   {
     path: "/login",
@@ -68,7 +69,45 @@ const routes = [
   {
     path: "/admin",
     name: "admin",
-    component: () => import("../views/admin")
+    component: () => import("../views/admin"),
+    children: [
+      {
+        path: "/admin/mine",
+        name: "mine",
+        component: () => import("../views/admin/mine")
+      },
+      {
+        path: "/admin/change",
+        name: "change",
+        component: () => import("../views/admin/mine/change")
+      },
+      {
+        path: "/admin/mycontent",
+        name: "mycontent",
+        component: () => import("../views/admin/mine/mycontent")
+      },
+      {
+        path: "/admin/myoperation",
+        name: "myoperation",
+        component: () => import("../views/admin/mine/myoperation")
+      },
+      {
+        path: "/admin/mylogin",
+        name: "mylogin",
+        component: () => import("../views/admin/mine/mylogin")
+      },
+      {
+        path: "/admin/myequipment",
+        name: "myequipment",
+        component: () => import("../views/admin/mine/myequipment")
+      },
+      {
+        path: "/admin/myauthorization",
+        name: "myauthorization",
+        component: () => import("../views/admin/mine/myauthorization")
+      }
+    ],
+    redirect: "/admin/mine"
   }
 ];
 

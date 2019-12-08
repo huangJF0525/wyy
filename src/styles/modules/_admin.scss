@@ -14,12 +14,24 @@
         }
     }
     .content{
+        width: 100%;
         height: 850px;
+        display: flex;
+        flex-wrap: wrap;
         .leftnav{
             width: 200px;
             height: 100%;
             background: skyblue;
             overflow: hidden;
+        }
+        .right-content{
+            flex: 1;
+            margin:1px 0 0 -1px;
+            .content-top{
+                width: auto;
+                height: 50px;
+                background: #000;
+            }
         }
     }
 }

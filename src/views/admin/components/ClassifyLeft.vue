@@ -17,13 +17,13 @@
         <el-submenu index="1-1">
           <template slot="title">父分类</template>
           <el-submenu index="1-1-1">
-            <template slot="title">功能展示</template>
+            <template slot="title" @click="open">功能展示</template>
           </el-submenu>
           <el-submenu index="1-1-2">
-            <template slot="title">介绍</template>
+            <template slot="title" @click="open">介绍</template>
           </el-submenu>
           <el-submenu index="1-1-3">
-            <template slot="title">演示</template>
+            <template slot="title" @click="open">演示</template>
           </el-submenu>
         </el-submenu>
       </el-submenu>
@@ -54,6 +54,9 @@ export default {
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath);
+    },
+    open(key) {
+      console.log(key._uid);
     }
   }
 };
